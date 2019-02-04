@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eindoefening Les 4 - Thomas</title>
+</head>
+<body>
+    <h1>Mee te brengen van de Colruyt</h1>
+    <ul id="list">
+
+    </ul>
+
+    <input type="text" id="product">
+    <button onclick="addProduct();">Add</button>
+    <button onclick="removeProduct();">Remove</button>
+
+    <script>
+        var productInput = document.querySelector("#product");
+        var list = document.querySelector("#list");
+        var fruit = ["Waspoeder", "Kip", "Alcoholstift", "Witte Wijn"];
+        printList();
+
+        function addProduct() {
+            var newProduct = productInput.value;
+            fruit.push(newProduct);
+            console.log(fruit);
+            printList();
+            productInput = "";
+        }
+
+        function removeProduct() {
+            var deleteProduct = productInput.value;
+            var indexProduct = fruit.indexOf(deleteProduct);
+            if(indexProduct !== -1){
+                fruit.splice(indexProduct, 1); 
+            } else {
+                console.log("niet gevonden");
+            }
+            printList();
+        }
+        
+        function printList() {
+            list.innerHTML = "<li>" + fruit.join("</li><li>") + "</li>";
+        }
+
+        
+
+
+    
+    
+    
+    </script>
+</body>
+</html>
