@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Eindoefening Les 4 - Thomas</title>
 </head>
+
+<!-- Voor een andere oplossing, zie GitHub -->
+
 <body>
     <h1>Mee te brengen van de Colruyt</h1>
     <ul id="list">
@@ -37,6 +40,7 @@
                 fruit.splice(indexProduct, 1); 
             } else {
                 console.log("niet gevonden");
+                alert("Product staat niet in de lijst.");
             }
             productInput.value = "";
             printList();
